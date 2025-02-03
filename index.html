@@ -20,24 +20,122 @@
         <p class="text-lg text-[#060606] mt-2 text-center">Inscríbete en la inducción para estudiantes de primer ingreso</p>
     </main>
 
-    <!-- Chatbot -->
-    <div id="chatbot" class="fixed bottom-4 right-4">
-        <button id="chatbot-toggle" class="bg-[#c2d500] text-[#060606] p-4 rounded-full shadow-lg focus:outline-none">
-            💬
-        </button>
-        <div id="chatbot-window" class="hidden flex flex-col bg-white border border-gray-300 rounded-lg shadow-lg mt-2 w-64 h-80">
-            <div class="flex justify-between items-center bg-[#c2d500] text-[#060606] p-2 rounded-t-lg">
-                <span class="font-bold">Chat de Inscripción</span>
-                <button id="chatbot-close" class="text-xl font-bold">&times;</button>
-            </div>
-            <div id="chatbot-messages" class="flex-1 p-2 overflow-y-auto">
-                <!-- Mensajes del chatbot -->
-            </div>
-            <div class="p-2">
-                <input type="text" id="chatbot-input" class="w-full border border-gray-300 rounded p-2" placeholder="Escribe tu mensaje...">
-            </div>
-        </div>
-    </div>
+    <script type="module">
+        import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+        Chatbot.init({
+            chatflowid: "b9dea620-56c9-4462-ad40-57bd81b6f1f1",
+            apiHost: "https://cecar-ia-flowise.3nwrom.easypanel.host",
+        })
+    </script>
+    
+
+    <script type="module">
+        import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js";
+        Chatbot.init({
+            chatflowid: "b9dea620-56c9-4462-ad40-57bd81b6f1f1",
+            apiHost: "https://cecar-ia-flowise.3nwrom.easypanel.host",
+            chatflowConfig: {
+                /* Configuración del flujo de chat */
+            },
+            observersConfig: {
+                /* Configuración de observadores */
+            },
+            theme: {
+                button: {
+                    backgroundColor: '#07321e', // Color de fondo del botón del chatbot
+                    right: 20,
+                    bottom: 20,
+                    size: 48,
+                    dragAndDrop: true,
+                    iconColor: '#ffffff', // Color del ícono del botón
+                    customIconSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
+                    autoWindowOpen: {
+                        autoOpen: true,
+                        openDelay: 2,
+                        autoOpenOnMobile: false
+                    }
+                },
+                tooltip: {
+                    showTooltip: true,
+                    tooltipMessage: '¡Hola soy BITO! 👋',
+                    tooltipBackgroundColor: '#07321e', // Color de fondo del tooltip
+                    tooltipTextColor: '#ffffff', // Color del texto del tooltip
+                    tooltipFontSize: 16
+                },
+                disclaimer: {
+                    title: 'Aviso Legal',
+                    message: "Al utilizar este chatbot, aceptas los <a target=\"_blank\" href=\"tratamiento-datos.html\">Términos y Condiciones</a>",
+                    textColor: '#000000', // Color del texto del aviso legal
+                    buttonColor: '#07321e', // Color del botón en el aviso legal
+                    buttonText: 'Comenzar Chat',
+                    buttonTextColor: '#ffffff', // Color del texto del botón en el aviso legal
+                    blurredBackgroundColor: 'rgba(0, 0, 0, 0.4)',
+                    backgroundColor: '#ffffff' // Color de fondo del aviso legal
+                },
+                customCSS: ``,
+                chatWindow: {
+                    showTitle: true,
+                    showAgentMessages: true,
+                    title: 'Asistente Virtual',
+                    titleAvatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
+                    welcomeMessage: '¡Hola! Este es un mensaje de bienvenida personalizado',
+                    errorMessage: 'Este es un mensaje de error personalizado',
+                    backgroundColor: '#ffffff', // Color de fondo de la ventana de chat
+                    backgroundImage: 'ruta/a/tu/imagen',
+                    height: 700,
+                    width: 400,
+                    fontSize: 16,
+                    starterPrompts: [
+                        "Hacer registro",
+                        "Registrar asistencia"
+                    ],
+                    starterPromptFontSize: 15,
+                    clearChatOnReload: false,
+                    sourceDocsTitle: 'Fuentes:',
+                    renderHTML: true,
+                    botMessage: {
+                        backgroundColor: '#f7f8ff', // Color de fondo de los mensajes del bot
+                        textColor: '#07321e', // Color del texto de los mensajes del bot
+                        showAvatar: true,
+                        avatarSrc: 'https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/parroticon.png'
+                    },
+                    userMessage: {
+                        backgroundColor: '#07321e', // Color de fondo de los mensajes del usuario
+                        textColor: '#ffffff', // Color del texto de los mensajes del usuario
+                        showAvatar: true,
+                        avatarSrc: 'https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png'
+                    },
+                    textInput: {
+                        placeholder: 'Escribe tu pregunta',
+                        backgroundColor: '#ffffff', // Color de fondo del campo de entrada de texto
+                        textColor: '#000000', // Color del texto del campo de entrada de texto
+                        sendButtonColor: '#07321e', // Color del botón de envío
+                        maxChars: 50,
+                        maxCharsWarningMessage: 'Has superado el límite de caracteres. Por favor, ingresa menos de 50 caracteres.',
+                        autoFocus: true,
+                        sendMessageSound: true,
+                        sendSoundLocation: 'send_message.mp3',
+                        receiveMessageSound: true,
+                        receiveSoundLocation: 'receive_message.mp3'
+                    },
+                    feedback: {
+                        color: '#000000' // Color del texto de retroalimentación
+                    },
+                    dateTimeToggle: {
+                        date: true,
+                        time: true
+                    },
+                    footer: {
+                        textColor: '#000000', // Color del texto del pie de página
+                        text: 'Desarrollado por',
+                        company: 'RTA',
+                        companyLink: 'https://tutoriales.cecar.edu.co/'
+                    }
+                }
+            }
+        });
+    </script>
+    
 
     <script src="js/script.js"></script>
 </body>
