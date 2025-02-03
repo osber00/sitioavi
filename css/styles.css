@@ -1,0 +1,21 @@
+/* Personalización de colores de Tailwind CSS */
+@layer utilities {
+    .bg-primary {
+        background-color: #062d1a;
+    }
+    .bg-secondary {
+        background-color: #c2d500;
+    }
+    .text-primary {
+        color: #062d1a;
+    }
+    .text-secondary {
+        color: #c2d500;
+    }
+    .text-dark {
+        color: #060606;
+    }
+    .text-light {
+        color: #ffffff;
+    }
+}

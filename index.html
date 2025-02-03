@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CECAR - Inducción de Primer Ingreso</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#ffffff] flex flex-col items-center justify-center min-h-screen relative">
+    <!-- Logo -->
+    <header class="w-full flex justify-start p-4">
+        <img src="https://cecar.edu.co/images/logocecar.png" alt="Logo CECAR" class="h-12">
+    </header>
+
+    <!-- Avatar -->
+    <main class="flex flex-col items-center justify-center flex-1">
+        <img src="avatar.png" alt="Avatar" class="h-32 w-32 rounded-full">
+        <h1 class="text-2xl font-bold text-[#062d1a] mt-4 text-center">Bienvenidos a CECAR</h1>
+        <p class="text-lg text-[#060606] mt-2 text-center">Inscríbete en la inducción para estudiantes de primer ingreso</p>
+    </main>
+
+    <!-- Chatbot -->
+    <div id="chatbot" class="fixed bottom-4 right-4">
+        <button id="chatbot-toggle" class="bg-[#c2d500] text-[#060606] p-4 rounded-full shadow-lg focus:outline-none">
+            💬
+        </button>
+        <div id="chatbot-window" class="hidden flex flex-col bg-white border border-gray-300 rounded-lg shadow-lg mt-2 w-64 h-80">
+            <div class="flex justify-between items-center bg-[#c2d500] text-[#060606] p-2 rounded-t-lg">
+                <span class="font-bold">Chat de Inscripción</span>
+                <button id="chatbot-close" class="text-xl font-bold">&times;</button>
+            </div>
+            <div id="chatbot-messages" class="flex-1 p-2 overflow-y-auto">
+                <!-- Mensajes del chatbot -->
+            </div>
+            <div class="p-2">
+                <input type="text" id="chatbot-input" class="w-full border border-gray-300 rounded p-2" placeholder="Escribe tu mensaje...">
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
