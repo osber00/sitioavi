@@ -5,16 +5,16 @@ document.addEventListener('DOMContentLoaded', function () {
     const chatbotMessages = document.getElementById('chatbot-messages');
     const chatbotInput = document.getElementById('chatbot-input');
 
-    chatbotToggle.addEventListener('click', function () {
+    /* chatbotToggle.addEventListener('click', function () {
         chatbotWindow.classList.toggle('hidden');
         chatbotInput.focus();
-    });
+    }); */
 
-    chatbotClose.addEventListener('click', function () {
+    /* chatbotClose.addEventListener('click', function () {
         chatbotWindow.classList.add('hidden');
-    });
+    }); */
 
-    chatbotInput.addEventListener('keypress', function (e) {
+    /* chatbotInput.addEventListener('keypress', function (e) {
         if (e.key === 'Enter' && chatbotInput.value.trim() !== '') {
             const userMessage = chatbotInput.value.trim();
             addMessage(userMessage, 'user');
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 addMessage(botResponse, 'bot');
             }, 1000);
         }
-    });
+    }); */
 
     function addMessage(message, sender) {
         const messageElement = document.createElement('div');
