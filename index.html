@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CECAR - Inducción de Primer Ingreso</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
@@ -15,7 +16,7 @@
 
     <!-- Avatar -->
     <main class="flex flex-col items-center justify-center flex-1">
-        <img src="avatar.png" alt="Avatar" class="h-32 w-32 rounded-full">
+        <img src="avatar.jpg" alt="Avatar" class="h-64 w-64 rounded-full">
         <h1 class="text-2xl font-bold text-[#062d1a] mt-4 text-center">Bienvenidos a CECAR</h1>
         <p class="text-lg text-[#060606] mt-2 text-center">Inscríbete en la inducción para estudiantes de primer ingreso</p>
     </main>
@@ -48,7 +49,7 @@
                     size: 48,
                     dragAndDrop: true,
                     iconColor: '#ffffff', // Color del ícono del botón
-                    customIconSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
+                    customIconSrc: 'avatar-2.jpg',
                     autoWindowOpen: {
                         autoOpen: true,
                         openDelay: 2,
@@ -67,7 +68,7 @@
                     message: "Al utilizar este chatbot, aceptas los <a target=\"_blank\" href=\"tratamiento-datos.html\">Términos y Condiciones</a>",
                     textColor: '#000000', // Color del texto del aviso legal
                     buttonColor: '#07321e', // Color del botón en el aviso legal
-                    buttonText: 'Comenzar Chat',
+                    buttonText: 'Aceptar',
                     buttonTextColor: '#ffffff', // Color del texto del botón en el aviso legal
                     blurredBackgroundColor: 'rgba(0, 0, 0, 0.4)',
                     backgroundColor: '#ffffff' // Color de fondo del aviso legal
@@ -77,7 +78,7 @@
                     showTitle: true,
                     showAgentMessages: true,
                     title: 'Bito',
-                    titleAvatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
+                    titleAvatarSrc: 'avatar-2.jpg',
                     welcomeMessage: '¡Hola! tomaré tus datos para registrarte',
                     errorMessage: 'Algo no funciona bien',
                     backgroundColor: '#ffffff', // Color de fondo de la ventana de chat
@@ -97,7 +98,7 @@
                         backgroundColor: '#f7f8ff', // Color de fondo de los mensajes del bot
                         textColor: '#07321e', // Color del texto de los mensajes del bot
                         showAvatar: true,
-                        avatarSrc: 'https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/parroticon.png'
+                        avatarSrc: 'avatar.jpg'
                     },
                     userMessage: {
                         backgroundColor: '#07321e', // Color de fondo de los mensajes del usuario
